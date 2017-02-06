@@ -9,5 +9,5 @@ To run the typing test, type the following commands into your console:
 
 t = TypingTest()
 
-t.__main__()
+t.\_\_main\_\_()
 
