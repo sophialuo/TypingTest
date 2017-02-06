@@ -6,6 +6,8 @@ words.txt file modified and obtained from: https://github.com/dwyl/english-words
 
 
 To run the typing test, type the following commands into your console:
+
 t = TypingTest()
+
 t.__main__()
 
