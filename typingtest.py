@@ -9,18 +9,19 @@ class TypingTest():
     def __init__(self):
         pass
 
-    '''
-    params:
-        filename: name of the file to be read
-        max_len: maximum length of a word to be included in the returned list
-        min_len: minimum length of a word to be included in the returned list
-        
-    Given a file of words separated by a line, return a list of all 
-    the words that have length between min_len and max_len inclusive.
-    
-    return: list
-    '''    
+  
     def format_file(self, filename, max_len, min_len):
+        '''
+        Given a file of words separated by a line, return a list of all 
+        the words that have length between min_len and max_len inclusive.
+        
+        Args:
+            filename: name of the file to be read
+            max_len: maximum length of a word to be included in the returned list
+            min_len: minimum length of a word to be included in the returned list
+                
+        Returns: list
+        '''  
         lst = []
         f = open(filename)
         word = f.readline()
@@ -31,31 +32,33 @@ class TypingTest():
             word = f.readline()
         return lst
     
-    '''
-    params:
-        orig: actual word
-        user: word to be compared to orig
-    
-    This method measures the accuracy of string user with respect to string 
-    orig. Accuracy is measured by with the SequenceMatcher class from the 
-    difflib library
-    
-    return: float
-    '''
+
     def accuracy(self, orig, user):
+        '''
+        This method measures the accuracy of string user with respect to string 
+        orig. Accuracy is measured by with the SequenceMatcher class from the 
+        difflib library
+    
+        Args:
+            orig: actual word
+            user: word to be compared to orig
+    
+        Returns: float
+        '''
         return SequenceMatcher(None, orig, user).ratio()
 
     
-    '''
-    This main method takes in user input of how long the maximum length of a word
-    should be, how long the minimum length of a word should be, and how long the
-    user wants to take the typing test for in seconds. Then, this main method
-    outputs words randomly selected from the word list returned by method
-    format_file as well as prints the total number of words typed and the average
-    accuracy of the user's typing (computed through taking the average of all the
-    accuracy values for each typed word)
-    '''
+
     def __main__(self):
+        '''
+        This main method takes in user input of how long the maximum length of a word
+        should be, how long the minimum length of a word should be, and how long the
+        user wants to take the typing test for in seconds. Then, this main method
+        outputs words randomly selected from the word list returned by method
+        format_file as well as prints the total number of words typed and the average
+        accuracy of the user's typing (computed through taking the average of all the
+        accuracy values for each typed word)
+        '''
         #user input
         print("Ready to test your typing skills?")
         duration = input("How long do you want to take this test for? \
