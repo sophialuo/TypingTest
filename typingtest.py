@@ -13,7 +13,7 @@ class TypingTest():
     def format_file(self, filename, max_len, min_len):
         '''
         Given a file of words separated by a line, return a list of all 
-        the words that have length between min_len and max_len inclusive.
+        the words that have lengths between min_len and max_len inclusive.
         
         Args:
             filename: name of the file to be read
