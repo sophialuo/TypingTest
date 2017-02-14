@@ -5,9 +5,5 @@ A typing test with a console UI that measures the accuracy and number of words y
 words.txt file modified and obtained from: https://github.com/dwyl/english-words/blob/master/words.txt
 
 
-To run the typing test, type the following commands into your console:
-
-t = TypingTest()
-
-t.\_\_main\_\_()
+Start the typing test by running the file.
 
