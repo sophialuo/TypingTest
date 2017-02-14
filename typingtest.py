@@ -61,18 +61,15 @@ class TypingTest():
         '''
         #user input
         print("Ready to test your typing skills?")
-        duration = input("How long do you want to take this test for? \
-                        Type a numeric value in seconds: ")
+        duration = input("How long do you want to take this test for? Type a numeric value in seconds: ")
         duration = int(duration)
-        max_len = input("How long do you want the max length of a word to be? \
-                        Type a numeric value: ")
+        max_len = input("How long do you want the max length of a word to be? Type a numeric value: ")
         max_len = int(max_len)
         while max_len < 0:
             max_len = input("Please input a positive number: ")
             max_len = int(max_len)
         
-        min_len = input("How long do you want the min length of a word to be? \
-                        Type a numeric value: ")
+        min_len = input("How long do you want the min length of a word to be? Type a numeric value: ")
         min_len = int(min_len)
         while min_len > max_len:
             min_len = input("Please input a number less than the max length: ")
@@ -99,10 +96,6 @@ class TypingTest():
         while time.time() < end:
             word = wordlist[random.randrange(lenlist)]
             user = input(word + '\n')
-            print(len(word))
-            print(len(user))
-            print(self.accuracy(word, user))
-            print(user)
             sum_accuracy += self.accuracy(word, user)
             counter += 1
         
@@ -111,4 +104,6 @@ class TypingTest():
 
 
 
-
+#start the test!
+t = TypingTest()
+t.__main__()
