@@ -5,5 +5,5 @@ A typing test with a console UI that measures the accuracy and number of words y
 words.txt file modified and obtained from: https://github.com/dwyl/english-words/blob/master/words.txt
 
 
-Start the typing test by running the file.
+Start the typing test by running typingtest.py
 
